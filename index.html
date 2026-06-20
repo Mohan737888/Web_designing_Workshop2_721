@@ -3,24 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Experiment 6</title>
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container{
+            width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+        }
+        button{
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }button:hover{
+            background-color: #0056b3;
+        }input{
+            padding: 8px;
+            width: 250px;
+        }
+    </style>
+</head>        
 <body>
-    <h2>Employee Management System</h2>
-    <input type="text" id="name" placeholder="Employee Name">
-    <input type="text" id="id" placeholder="Employee ID">
-    <input type="text" id="salary" placeholder="Salary">
-    <input type="text" id="dept" placeholder="Department">
-     <br><br>
-     <button onclick="addEmployess()">Add Employee</button>
-     <button onclick="displayEmployess()">All</button>
-     <button onclick="filterEmplorees()">Salary</button>
-     <button onclick="TotalSalary()">Total Salary</button>
-     <button onclick="avgSalary()">Average Salary</button>
-     <button onclick="countDept()">Count by Department</button>
-
-<div id="output"></div>
-<script src=""></script>
-
+    <div class="container">
+        <h2 id="mainHeading">Welcome to JavaScript Lab</h2>
+        <input type="text" id="userInput" placeholder="Enter new heading text" />
+        <br><br>
+        <button id="changeTextBtn">Change Heading</button>
+        <button id="bgColorBtn">Change Background</button>
+        <button id="fontSizeBtn">Increase font size</button>
+        <button id="toggleBtn">Show/Hide Paragraph</button>
+        <button id="resetBtn">Reset</button>
+        <p id="paragraph">This is a sample paragraph. JavaScript events can dynamically change content. </p>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
