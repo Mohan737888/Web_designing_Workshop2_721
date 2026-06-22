@@ -1,32 +1,7 @@
-let heading = document.getElementById("mainHeading");
-let paragraph = document.getElementById("pargraph");
-let input = document.getElementById("userInput");
-let fontSize = 16;
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-document.getElementById("changeTextBtn").addEventListener("click",()=>{
-    if(input.value !== ""){
-        heading.innerHTML = input.value
-    }
-});
-document.getElementById("bgColorBtn").onclick = function(){
-    document.body.style.backgroundColor = "#" + Math.floor(Math.random() * 1677215).toString(16);
-};
-document.getElementById("fontSizeBtn").addEventListener("click",()=>{
-    fontSize+=2;
-    paragraph.style.fontSize = fontSize + "px";
-});
-document.getElementById("toggleBtn").addEventListener("click",()=>{
-    if(paragraph.style.display == "none"){
-        paragraph.style.display = "block";
-    }else{
-        paragraph.style.display = "none";
-    }
-});
-document.getElementById("resetBtn").addEventListener("click",()=>{
-    heading.innerHTML = "Welcome to JavaScript Lab";
-    paragraph.style.display = "block";
-    paragraph.style.fontSize = "16px";
-    document.body.style.backgroundColor = "#f4f4f4";
-    input.value = "";
-    fontSize = 16;
-});
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
